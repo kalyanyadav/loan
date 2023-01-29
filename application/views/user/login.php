@@ -40,7 +40,7 @@
  <?php echo form_submit(['name'=>'login','value'=>'Login','class'=>'btn btn-primary btn-block']); ?>
 <?php echo form_close(); ?>
           <div class="text-center">
-<a class="d-block small mt-3" href="<?php echo site_url('user/Signup'); ?>">Register an Account</a>
+<!-- <a class="d-block small mt-3" href="<?php echo site_url('user/Signup'); ?>">Register an Account</a> -->
  <a class="d-block small" href="<?php echo site_url('Home'); ?>">Back to Home page</a>
 
           </div>
