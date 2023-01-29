@@ -53,13 +53,60 @@
 
 
             <div class="card-body">
-              <div class="table-responsive">
-<!---- Success Message ---->
-<?php if ($this->session->flashdata('success')) { ?>
-<p style="color:green; font-size:18px;"><?php echo $this->session->flashdata('success'); ?></p>
-</div>
-<?php } ?>
-                
+            <?php echo form_open('user/customer/addCustomerDetails');?>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+
+<?php echo form_input(['name'=>'firstname','id'=>'firstname','class'=>'form-control','autofocus'=>'autofocus','value'=>set_value('firstname')]);?>
+<?php echo form_label('Enter your first name', 'firstname'); ?>
+<?php echo form_error('firstname',"<div style='color:red'>","</div>");?>
+
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+
+<?php echo form_input(['name'=>'lastname','id'=>'lastname','class'=>'form-control','autofocus'=>'autofocus','value'=>set_value('lastname')]);?>
+<?php echo form_label('Enter your  last name', 'lastname'); ?>
+<?php echo form_error('lastname',"<div style='color:red'>","</div>");?>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+            <div class="form-row">
+                <div class="col-md-6">
+              <div class="form-label-group">
+
+<?php echo form_input(['name'=>'emailid','id'=>'emailid','class'=>'form-control','autofocus'=>'autofocus','value'=>set_value('emailid')]);?>
+<?php echo form_label('Enter valid email id', 'emailid'); ?>
+<?php echo form_error('emailid',"<div style='color:red'>","</div>");?>
+
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-label-group">
+
+<?php echo form_input(['name'=>'mobilenumber','id'=>'mobilenumber','class'=>'form-control','autofocus'=>'autofocus','value'=>set_value('mobilenumber')]);?>
+<?php echo form_label('Enter Mobile Number', 'mobilenumber'); ?>
+<?php echo form_error('mobilenumber',"<div style='color:red'>","</div>");?>
+
+              </div>
+            </div>
+             </div>
+            </div>
+
+   
+            
+</div></div>
+ <?php echo form_submit(['name'=>'Register','value'=>'Register','class'=>'btn btn-primary btn-block']); ?>
+
+          </form>
                
               </div>
             </div>

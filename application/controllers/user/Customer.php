@@ -13,9 +13,26 @@ public function index(){
 }
 
 public function addCustomer(){
-    
-    //$this->load->model('Customer_Model');
     $this->load->view('user/add_customer');
 }
+
+public function addCustomer1(){
+    $this->form_validation->set_rules('firstname','First Name','required|alpha');
+    $this->form_validation->set_rules('lastname','Last  Name','required|alpha');
+    $this->form_validation->set_rules('emailid','Email id','required|valid_email|is_unique[tblusers.emailId]');
+    $this->form_validation->set_rules('mobilenumber','Mobile Number','required|numeric|exact_length[10]');
+    if($this->form_validation->run()){
+        $fname=$this->input->post('firstname');
+        $lname=$this->input->post('lastname');
+        $emailid=$this->input->post('emailid');
+        $mnumber=$this->input->post('mobilenumber');
+        $this->load->model('Customer_Model');
+        $this->Customer_Model->addcustomerdetails($fname,$lname,$emailid,$mnumber);
+        } else {
+        $this->load->view('user/addCustomer');
+        }	
+}
+
+
 
 }
