@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/gx04cbu1baxo/public_html/loanapp 
-    - /bin/cp/*  $DEPLOYPATH
+    - /bin/cp/  $DEPLOYPATH
