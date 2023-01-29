@@ -6,3 +6,4 @@
 !*/cache/.htaccess
 */config/config.php
 */config/database.php
+*/config/*
