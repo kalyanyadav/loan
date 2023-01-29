@@ -49,11 +49,18 @@
               <i class="fas fa-table"></i>
              Add Customer Details
             </div>
-             
-
 
             <div class="card-body">
-            <?php echo form_open('user/customer/addCustomerDetails');?>
+              <!---- Success Message ---->
+<?php if ($this->session->flashdata('success')) { ?>
+<p  class="alert alert-danger"><?php echo $this->session->flashdata('success'); ?></p>
+</div>
+<?php } ?>
+<!---- Error Message ---->
+<?php if ($this->session->flashdata('error')) { ?>
+<p class="alert alert-success"><?php echo $this->session->flashdata('error');?></p>
+<?php } ?>  
+            <?php echo form_open('user/customer/addCustomerdetails');?>
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">

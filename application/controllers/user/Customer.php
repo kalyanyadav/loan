@@ -16,7 +16,8 @@ public function addCustomer(){
     $this->load->view('user/add_customer');
 }
 
-public function addCustomer1(){
+public function addCustomerdetails(){
+    print_r($_POST);
     $this->form_validation->set_rules('firstname','First Name','required|alpha');
     $this->form_validation->set_rules('lastname','Last  Name','required|alpha');
     $this->form_validation->set_rules('emailid','Email id','required|valid_email|is_unique[tblusers.emailId]');
@@ -28,9 +29,13 @@ public function addCustomer1(){
         $mnumber=$this->input->post('mobilenumber');
         $this->load->model('Customer_Model');
         $this->Customer_Model->addcustomerdetails($fname,$lname,$emailid,$mnumber);
-        } else {
-        $this->load->view('user/addCustomer');
-        }	
+        $this->load->view('user/add_customer');
+    }
+    else{
+        echo ("Failure");
+        $this->load->view('user/add_customer');
+    }
+ 
 }
 
 

@@ -69,7 +69,7 @@
                       <th>Last Name</th>
                       <th>Email id</th>
                       <th>Reg date</th>
-                      <th>Action</th>
+                      <!-- <th>Action</th> -->
                     </tr>
                   </thead>
                   <tfoot>
@@ -79,7 +79,7 @@
                       <th>Last Name</th>
                       <th>Email id</th>
                       <th>Reg date</th>
-                      <th>Action</th>
+                      <!-- <th>Action</th> -->
                     </tr>
                   </tfoot>
                   <tbody>
@@ -91,10 +91,10 @@ foreach ($userdetails as $row) :
 ?>                    
                     <tr>
                       <td><?php echo htmlentities($cnt);?></td>
-                      <td><?php echo htmlentities($row->first_Name)?></td>
-                      <td><?php echo htmlentities($row->last_Name)?></td>
-                      <!-- <td><?php echo htmlentities($row->emailId)?></td>
-                      <td><?php echo htmlentities($row->regDate)?></td> -->
+                      <td><?php echo htmlentities($row->first_name)?></td>
+                      <td><?php echo htmlentities($row->last_name)?></td>
+                      <td><?php echo htmlentities($row->email)?></td>
+                      <td><?php echo htmlentities($row->mobileNumber)?></td>
                       <!-- <td><?php echo  anchor("admin/Manage_Users/getuserdetail/{$row->id}",' ','class="fa fa-edit"')?>
                         <?php echo  anchor("admin/Manage_Users/deleteuser/{$row->id}",' ','class="fa fa-trash"')?> -->
 
